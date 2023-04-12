@@ -77,20 +77,28 @@ function calcular() {
   var valorL = document.getElementById('inValFinal').value;
 
 
-  if (valor <= 500)
+  if (valor <= 500){
       document.getElementById('inPercDesc').value = 0.5;
-  document.getElementById('inValDesc').value = (0.5 * valor) / 100;
+      document.getElementById('inValFinal').value = valor -(document.getElementById('inValDesc').value = (0.5 * valor) / 100);}
 
   if (valor < 0)
-      alert('Somente valores positivos!');
+      alert('Somente valores positivos!');{
   let valordesc = document.getElementById('inValDesc').value;
   let valor2 = valor - valordesc;
-  var valorL = document.getElementById('inValFinal').value= valor2
+  var valorL = document.getElementById('inValFinal').value = valor2}
 
-  if (valor > 500 && valor <= 1000)
+  if (valor > 500 && valor <= 1000){
       document.getElementById('inPercDesc').value = 0.8;
-  if (valor > 1000 && valor <= 1500)
+      document.getElementById('inValFinal').value = valor -(document.getElementById('inValDesc').value = (0.8 * valor) / 100);
+  }
+  if (valor > 1000 && valor <= 1500){
       document.getElementById('inPercDesc').value = 1.0;
-  if (valor > 1500 && valor <= 2000)
+      document.getElementById('inValFinal').value = valor -(document.getElementById('inValDesc').value = (1.0 * valor) / 100);
+  }
+  if (valor > 1500 && valor <= 2000){
       document.getElementById('inPercDesc').value = 1.5;
+      document.getElementById('inValFinal').value = valor -(document.getElementById('inValDesc').value = (1.5 * valor) / 100);
+  }
+      
+
 }
